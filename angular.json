@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "lego-bricks-lib": {
+      "root": "projects/lego-bricks-lib",
+      "sourceRoot": "projects/lego-bricks-lib/src",
+      "projectType": "library",
+      "prefix": "lb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/lego-bricks-lib/tsconfig.lib.json",
+            "project": "projects/lego-bricks-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/lego-bricks-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lego-bricks-lib/src/test.ts",
+            "tsConfig": "projects/lego-bricks-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/lego-bricks-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lego-bricks-lib/tsconfig.lib.json",
+              "projects/lego-bricks-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "lego-bricks"
