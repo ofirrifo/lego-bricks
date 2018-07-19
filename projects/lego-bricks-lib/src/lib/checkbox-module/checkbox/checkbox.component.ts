@@ -26,6 +26,7 @@ export class CheckboxComponent {
 
   @Input() checked: boolean;
   @Input() indeterminate: boolean;
+  @Input() tabIndex: number;
 
   /**
    * disable checkbox.
