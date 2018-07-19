@@ -12,13 +12,15 @@ export class CheckboxComponent {
 
   @Input() label: string;
 
-  _id = `lego_checkbox_${checkboxId++}`;
+  _id: string;
   @Input()
   set id(id: string) {
     this._id = id;
   }
-
   get id(): string {
+    if (this._id === void 0) {
+      this.id = `lego_checkbox_${checkboxId++}`;
+    }
     return this._id;
   }
 

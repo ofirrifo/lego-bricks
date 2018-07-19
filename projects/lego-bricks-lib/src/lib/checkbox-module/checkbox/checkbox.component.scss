@@ -1,72 +1,80 @@
 @import "../../../styles/color";
 
-* {
-  box-sizing: border-box;
-  user-select: none;
-}
-
-.ui-checkbox-wrapper {
+lb-checkbox {
   display: inline-flex;
-  align-items: center;
 
-  .real-checkbox {
-    clip: rect(0, 0, 0, 0);
-    position: absolute;
+  * {
+    box-sizing: border-box;
+    user-select: none;
   }
 
-  .fake-checkbox {
+  .ui-checkbox-wrapper {
+    display: inline-flex;
+    align-items: center;
     position: relative;
-    width: 17px;
-    height: 17px;
-    border: 1px solid $blue;
-    display: inline-block;
-    background-color: $black;
-  }
 
-  .checkbox-label {
-    margin-left: 5px;
-    color: $gray-300;
-  }
+    .real-checkbox {
+      clip: rect(0, 0, 0, 0);
+      position: absolute;
+      top: 0;
+    }
 
-  .real-checkbox:checked {
-    & + .fake-checkbox {
-      .v {
-        position: absolute;
-        left: 5px;
-        top: 2px;
-        width: 5px;
-        height: 9px;
-        border-right: 2px solid $white;
-        border-bottom: 2px solid $white;
-        transform: rotate(34deg);
+    .fake-checkbox {
+      position: relative;
+      width: 17px;
+      height: 17px;
+      border: 1px solid $blue;
+      display: inline-block;
+      background-color: $black;
+    }
+
+    .checkbox-label {
+      margin-left: 5px;
+      color: $gray-300;
+    }
+
+    .real-checkbox:checked {
+      & + .fake-checkbox {
+        .v {
+          position: absolute;
+          left: 5px;
+          top: 2px;
+          width: 5px;
+          height: 9px;
+          border-right: 2px solid $white;
+          border-bottom: 2px solid $white;
+          transform: rotate(34deg);
+        }
       }
     }
-  }
 
-  .real-checkbox:not([disabled]) {
-    & + .fake-checkbox {
-      cursor: pointer;
-      transition: border 400ms;
-      &:hover {
-        border: 1px solid #78b9ff;
-      }
-
-      & + .checkbox-label {
+    .real-checkbox:not([disabled]) {
+      & + .fake-checkbox {
         cursor: pointer;
+        transition: border 400ms;
+        &:hover {
+          border: 1px solid #78b9ff;
+        }
+
+        & + .checkbox-label {
+          cursor: pointer;
+        }
       }
+
     }
 
-  }
-
-  .real-checkbox:disabled {
-    & + .fake-checkbox {
-      opacity: .5;
-
-      & + .checkbox-label {
+    .real-checkbox:disabled {
+      & + .fake-checkbox {
         opacity: .5;
+
+        & + .checkbox-label {
+          opacity: .5;
+        }
       }
+
     }
 
   }
-
 }
+
+

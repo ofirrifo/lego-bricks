@@ -13,6 +13,10 @@
   </div>
 
   <!--Checkbox Label-->
-  <label class="checkbox-label" [for]="id">{{label}}</label>
+  <label
+    class="checkbox-label"
+    [for]="id"
+    *ngIf="label?.length"
+  >{{label}}</label>
 </label>
 
