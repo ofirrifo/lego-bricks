@@ -1,5 +1,6 @@
 @import "../../../styles/common-styles";
 
+$hover-border-color: #78b9ff;
 
 lb-checkbox {
   display: inline-flex;
@@ -21,18 +22,17 @@ lb-checkbox {
     }
 
     .fake-checkbox {
+      @include lego-same-width-height(17px);
+      @include lego-thin-solid-border($blue);
       position: relative;
-      width: 17px;
-      height: 17px;
-      border: 1px solid $blue;
       display: inline-block;
       background-color: $black;
     }
 
     .checkbox-label {
+      @include lego-font-13;
       margin-left: 5px;
       color: $gray-300;
-      @include lego-font-13;
     }
 
     .real-checkbox:checked {
@@ -55,7 +55,7 @@ lb-checkbox {
         cursor: pointer;
         transition: border 400ms;
         &:hover {
-          border: 1px solid #78b9ff;
+          @include lego-thin-solid-border($hover-border-color);
         }
 
         & + .checkbox-label {

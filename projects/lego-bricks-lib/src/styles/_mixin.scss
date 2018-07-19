@@ -1,3 +1,6 @@
+/*
+  Fonts
+ */
 @mixin lego-font($font-size: 13px) {
   font-size: $font-size;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,3 +10,22 @@
   @include lego-font(13px);
 }
 
+/*
+  Border
+ */
+@mixin lego-solid-border($border-width: 1px, $border-color: black) {
+  border: $border-width solid $border-color;
+}
+
+@mixin lego-thin-solid-border($border-color) {
+  @include lego-solid-border(1px, $border-color);
+}
+
+/*
+  Other
+ */
+
+@mixin lego-same-width-height($width-height) {
+  width: $width-height;
+  height: $width-height;
+}
