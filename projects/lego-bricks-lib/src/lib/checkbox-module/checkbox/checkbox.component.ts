@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 let checkboxId = 0;
 
@@ -19,6 +19,7 @@ export class CheckboxComponent {
   set id(id: string) {
     this._id = id;
   }
+
   get id(): string {
     if (this._id === void 0) {
       this.id = `lego_checkbox_${checkboxId++}`;
@@ -36,5 +37,12 @@ export class CheckboxComponent {
    * the css cursor will be auto
    */
   @Input() disabled: boolean;
+
+  @Output() checkboxClicked = new EventEmitter<any>();
+
+  onCheckboxClicked(checkboxElement: any) {
+    checkboxElement.blur();
+    this.checkboxClicked.emit({checked: checkboxElement.checked});
+  }
 
 }

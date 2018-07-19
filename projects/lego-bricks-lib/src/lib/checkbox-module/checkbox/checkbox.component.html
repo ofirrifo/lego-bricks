@@ -1,6 +1,7 @@
 <label class="ui-checkbox-wrapper" [for]="id" [class.left-label]="labelToLeft">
   <!--Real Checkbox-->
   <input
+    #checkbox
     type="checkbox"
     class="real-checkbox"
     [id]="id"
@@ -8,6 +9,8 @@
     [checked]="checked"
     [indeterminate]="indeterminate"
     [tabIndex]="tabIndex"
+
+    (click)="onCheckboxClicked(checkbox)"
   >
 
   <!--Fake Checkbox-->
