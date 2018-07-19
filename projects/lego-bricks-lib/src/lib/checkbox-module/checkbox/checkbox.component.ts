@@ -24,6 +24,7 @@ export class CheckboxComponent {
     return this._id;
   }
 
+  @Input() checked: boolean;
 
   /**
    * disable checkbox.
