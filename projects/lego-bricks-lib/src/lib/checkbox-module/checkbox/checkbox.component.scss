@@ -1,4 +1,5 @@
-@import "../../../styles/color";
+@import "../../../styles/common-styles";
+
 
 lb-checkbox {
   display: inline-flex;
@@ -31,6 +32,7 @@ lb-checkbox {
     .checkbox-label {
       margin-left: 5px;
       color: $gray-300;
+      @include lego-font-13;
     }
 
     .real-checkbox:checked {
