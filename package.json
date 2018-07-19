@@ -1,10 +1,24 @@
 {
   "name": "lego-bricks",
   "version": "0.0.0",
+  "description": "Angular UI library for reusable components",
+  "keywords": [
+    "angular",
+    "UI Component",
+    "reusable components",
+    "UI library"
+  ],
+  "author": "Ofir Fridman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ofirrifo/lego-bricks/issues"
+  },
+  "homepage": "https://github.com/ofirrifo/lego-bricks",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --open",
+    "build": "ng build --prod --aot",
+    "build:lego-bricks-lib": "ng build lego-bricks-lib --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
