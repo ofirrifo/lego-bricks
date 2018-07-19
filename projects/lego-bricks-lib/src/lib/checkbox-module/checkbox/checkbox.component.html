@@ -1,0 +1,18 @@
+<label class="ui-checkbox-wrapper" [for]="id">
+  <!--Real Checkbox-->
+  <input
+    type="checkbox"
+    class="real-checkbox"
+    [id]="id"
+    [disabled]="disabled"
+  >
+
+  <!--Fake Checkbox-->
+  <div class="fake-checkbox">
+    <div class="v"></div>
+  </div>
+
+  <!--Checkbox Label-->
+  <label class="checkbox-label" [for]="id">{{label}}</label>
+</label>
+

@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-import { LegoBricksLibComponent } from './lego-bricks-lib.component';
 
 @NgModule({
   imports: [
   ],
-  declarations: [LegoBricksLibComponent],
-  exports: [LegoBricksLibComponent]
+  declarations: [],
+  exports: []
 })
 export class LegoBricksLibModule { }
