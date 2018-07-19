@@ -69,7 +69,7 @@ lb-checkbox {
       }
     }
 
-    .real-checkbox:focus{
+    .real-checkbox:focus {
       & + .fake-checkbox {
         @include lego-thin-solid-border($hover-border-color);
       }
@@ -79,15 +79,11 @@ lb-checkbox {
       & + .fake-checkbox {
         cursor: pointer;
         transition: border 400ms;
-        &:hover {
-          @include lego-thin-solid-border($hover-border-color);
-        }
 
         & + .checkbox-label {
           cursor: pointer;
         }
       }
-
     }
 
     .real-checkbox:disabled {
@@ -101,7 +97,16 @@ lb-checkbox {
 
     }
 
+    &:hover {
+      .real-checkbox:not([disabled]) {
+        & + .fake-checkbox {
+          @include lego-thin-solid-border($hover-border-color);
+        }
+      }
+    }
+
   }
+
 }
 
 
