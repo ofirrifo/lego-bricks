@@ -107,6 +107,12 @@ lb-checkbox {
 
   }
 
+  .ui-checkbox-wrapper.left-label {
+    flex-direction: row-reverse;
+
+    .checkbox-label {
+      margin-right: 5px;
+      margin-left: 0;
+    }
+  }
 }
-
-

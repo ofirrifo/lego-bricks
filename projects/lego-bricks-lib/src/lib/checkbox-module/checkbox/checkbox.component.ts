@@ -12,6 +12,7 @@ let checkboxId = 0;
 export class CheckboxComponent {
 
   @Input() label: string;
+  @Input() labelToLeft: boolean;
 
   _id: string;
   @Input()
