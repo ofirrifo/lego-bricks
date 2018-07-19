@@ -69,6 +69,12 @@ lb-checkbox {
       }
     }
 
+    .real-checkbox:focus{
+      & + .fake-checkbox {
+        @include lego-thin-solid-border($hover-border-color);
+      }
+    }
+
     .real-checkbox:not([disabled]) {
       & + .fake-checkbox {
         cursor: pointer;
