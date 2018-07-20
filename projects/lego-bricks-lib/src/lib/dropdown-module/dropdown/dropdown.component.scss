@@ -56,6 +56,23 @@ lb-dropdown {
       @include lego-same-width-height(100%);
       @include lego-thin-solid-border($white);
       border-top: 0;
+
+      .dropdown-item-list {
+        margin: 0;
+        padding: 0;
+
+        .dropdown-item {
+          height: 30px;
+          display: flex;
+          align-items: center;
+          padding-left: 8px;
+          cursor: pointer;
+
+          &:hover{
+            background-color: $teal;
+          }
+        }
+      }
     }
 
   }

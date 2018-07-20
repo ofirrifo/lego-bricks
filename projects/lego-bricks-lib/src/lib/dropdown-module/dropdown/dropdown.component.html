@@ -5,6 +5,12 @@
     <lb-toggle-arrow [open]="open"></lb-toggle-arrow>
   </div>
 
-  <div *ngIf="open" class="body"></div>
+  <div *ngIf="open" class="body">
+    <ul class="dropdown-item-list">
+      <li class="dropdown-item" *ngFor="let item of items">
+        {{item}}
+      </li>
+    </ul>
+  </div>
 
 </div>

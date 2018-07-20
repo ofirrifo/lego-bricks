@@ -15,6 +15,8 @@ export class DropdownComponent implements OnInit {
    */
   @Input() disabled: boolean;
 
+  @Input() items = [1, 2, 3];
+
   open = false;
 
   constructor() {
