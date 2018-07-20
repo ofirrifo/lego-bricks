@@ -4,6 +4,7 @@ lb-dropdown {
   display: inline-flex;
   width: 100%;
   height: 32px;
+
   * {
     box-sizing: border-box;
     user-select: none;
@@ -15,62 +16,6 @@ lb-dropdown {
     flex-direction: column;
     background-color: $gray-900;
     @include lego-same-width-height(100%);
-
-    .body {
-      background-color: $gray-900;
-      position: absolute;
-      top: 32px;
-      min-height: 300px;
-      @include lego-same-width-height(100%);
-      @include lego-thin-solid-border($white);
-      border-top: 0;
-
-      .search-wrapper {
-        padding: 6px;
-        background-color: $gray-700;
-
-        .search-input {
-          background-color: $gray-900;
-          @include lego-same-width-height(100%);
-          @include lego-thin-solid-border($gray-600);
-          height: 30px;
-          font-size: 13px;
-          padding-left: 8px;
-          transition: border 300ms;
-
-          &:hover {
-            @include lego-thin-solid-border($white);
-          }
-
-          &:focus {
-            outline: 0;
-            @include lego-thin-solid-border($white);
-          }
-
-          &::-webkit-input-placeholder {
-            font-style: italic;
-          }
-        }
-      }
-
-      .dropdown-item-list {
-        margin: 0;
-        padding: 0;
-
-        .dropdown-item {
-          height: 30px;
-          display: flex;
-          align-items: center;
-          padding-left: 10px;
-          cursor: pointer;
-
-          &:hover {
-            background-color: $teal;
-          }
-        }
-      }
-    }
-
   }
 
   .open {
@@ -81,6 +26,7 @@ lb-dropdown {
 
   .disabled {
     cursor: auto;
+    pointer-events: none;
   }
 }
 

@@ -18,6 +18,4 @@ export class DropdownHeadComponent {
   @Input() placeholder = 'Please select';
   @Input() open: boolean;
 
-  @Output() toggleOpenChanged = new EventEmitter<boolean>();
-
 }
