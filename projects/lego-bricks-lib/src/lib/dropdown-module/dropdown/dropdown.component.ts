@@ -16,17 +16,7 @@ export class DropdownComponent implements OnInit {
    */
   @Input() disabled: boolean;
 
-  @Input() items: DropdownItems[] = [
-    {id: '1', text: 'Item 1', selected: false},
-    {id: '2', text: 'Item 2', selected: false},
-    {id: '3', text: 'Item 3', selected: false},
-    {id: '1', text: 'Item 1', selected: false},
-    {id: '2', text: 'Item 2', selected: false},
-    {id: '3', text: 'Item 3', selected: false},
-    {id: '1', text: 'Item 1', selected: false},
-    {id: '2', text: 'Item 2', selected: false},
-    {id: '3', text: 'Item 3', selected: false}
-  ];
+  @Input() items: DropdownItems[] = [];
   @Input() placeholder = 'Please select';
   @Input() searchPlaceholder = 'Search...';
   @Input() showSearch = true;
@@ -34,6 +24,9 @@ export class DropdownComponent implements OnInit {
   open = false;
 
   constructor() {
+    for (let i = 0; i < 10000; i++) {
+      this.items.push({id: i, text: `Item ${i}`, selected: false});
+    }
   }
 
   ngOnInit() {
