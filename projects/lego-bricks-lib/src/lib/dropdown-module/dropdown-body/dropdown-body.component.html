@@ -1,5 +1,5 @@
 <div class="body">
-  <div class="search-wrapper">
+  <div *ngIf="showSearch" class="search-wrapper">
     <input class="search-input" type="text" [placeholder]="searchPlaceholder">
   </div>
   <ul class="dropdown-item-list">

@@ -23,6 +23,7 @@ export class DropdownComponent implements OnInit {
   ];
   @Input() placeholder = 'Please select';
   @Input() searchPlaceholder = 'Search...';
+  @Input() showSearch = false;
 
   open = false;
 

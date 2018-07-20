@@ -12,6 +12,7 @@
   <lb-dropdown-body
     *ngIf="open"
     [items]="items"
+    [showSearch]="showSearch"
 
     (selectionChanged)="selectionChanged($event)"
   ></lb-dropdown-body>

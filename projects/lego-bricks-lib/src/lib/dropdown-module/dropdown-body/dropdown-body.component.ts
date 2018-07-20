@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { DropdownItems } from '../models/dropdown-items.interface';
 
 @Component({
   selector: 'lb-dropdown-body',
@@ -10,7 +11,8 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEn
 export class DropdownBodyComponent {
 
   @Input() searchPlaceholder = 'Search...';
-  @Input() items = [];
+  @Input() items: DropdownItems[] = [];
   @Output() selectionChanged = new EventEmitter<any>();
+  @Input() showSearch = false;
 
 }
