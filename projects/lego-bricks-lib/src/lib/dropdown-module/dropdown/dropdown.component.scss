@@ -4,32 +4,64 @@ lb-dropdown {
   display: inline-flex;
   width: 100%;
   height: 32px;
+  * {
+    box-sizing: border-box;
+    user-select: none;
+  }
 
   .lego-dropdown {
-    display: inline-flex;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: $gray-900;
-    @include lego-thin-solid-border($gray-600);
     @include lego-same-width-height(100%);
-    transition: border 300ms;
-
-    * {
-      box-sizing: border-box;
-      user-select: none;
-    }
 
     .head {
       cursor: pointer;
       display: flex;
       align-items: center;
+      transition: border 300ms;
       @include lego-same-width-height(100%);
+      @include lego-thin-solid-border($gray-600);
+
+      &:hover {
+        @include lego-thin-solid-border($white);
+      }
 
       lb-toggle-arrow {
         margin-left: auto;
         margin-right: 10px;
       }
+
+      .placeholder {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        padding-left: 8px;
+        font-size: 13px;
+
+        &::-webkit-input-placeholder {
+          font-style: italic;
+        }
+      }
     }
 
-    &:hover{
+    .body {
+      background-color: $gray-900;
+      position: absolute;
+      top: 32px;
+      min-height: 300px;
+      @include lego-same-width-height(100%);
+      @include lego-thin-solid-border($white);
+      border-top: 0;
+    }
+
+  }
+
+  .open {
+    .head {
       @include lego-thin-solid-border($white);
     }
   }

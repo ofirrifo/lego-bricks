@@ -1,9 +1,10 @@
-<div class="lego-dropdown" [class.disabled]="disabled">
+<div class="lego-dropdown" [class.disabled]="disabled" [class.open]="open">
 
   <div class="head" (click)="toggle()">
+    <input type="text" class="placeholder" readonly placeholder="Please select...">
     <lb-toggle-arrow [open]="open"></lb-toggle-arrow>
   </div>
 
-  <div class="body"></div>
+  <div *ngIf="open" class="body"></div>
 
 </div>
