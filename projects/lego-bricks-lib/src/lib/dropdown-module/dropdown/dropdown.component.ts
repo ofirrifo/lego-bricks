@@ -16,6 +16,8 @@ export class DropdownComponent implements OnInit {
   @Input() disabled: boolean;
 
   @Input() items = [1, 2, 3];
+  @Input() placeholder = 'Please select';
+  @Input() searchPlaceholder = 'Search...';
 
   open = false;
 

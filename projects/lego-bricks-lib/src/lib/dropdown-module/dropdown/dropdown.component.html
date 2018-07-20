@@ -1,11 +1,14 @@
 <div class="lego-dropdown" [class.disabled]="disabled" [class.open]="open">
 
   <div class="head" (click)="toggle()">
-    <input type="text" class="placeholder" readonly placeholder="Please select...">
+    <input type="text" class="placeholder" readonly [placeholder]="placeholder">
     <lb-toggle-arrow [open]="open"></lb-toggle-arrow>
   </div>
 
   <div *ngIf="open" class="body">
+    <div class="search-wrapper">
+      <input class="search-input" type="text" [placeholder]="searchPlaceholder">
+    </div>
     <ul class="dropdown-item-list">
       <li class="dropdown-item" *ngFor="let item of items">
         {{item}}
