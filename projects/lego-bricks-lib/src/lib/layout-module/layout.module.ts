@@ -9,4 +9,4 @@ import { RowComponent } from './row/row.component';
   declarations: [RowComponent],
   exports: [RowComponent],
 })
-export class LayoutModule { }
+export class LegoLayoutModule { }

@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RouterModule } from '@angular/router';
-import { CheckboxModule } from '../../../../projects/lego-bricks-lib/src/lib/checkbox-module/checkbox.module';
-import { LayoutModule } from '../../../../projects/lego-bricks-lib/src/lib/layout-module/layout.module';
+import { LegoCheckboxModule } from '../../../../projects/lego-bricks-lib/src/lib/checkbox-module/checkbox.module';
+import { LegoLayoutModule } from '../../../../projects/lego-bricks-lib/src/lib/layout-module/layout.module';
+import { LegoDropdownModule } from '../../../../projects/lego-bricks-lib/src/lib/dropdown-module/dropdown.module';
 
 @NgModule({
   imports: [
@@ -13,8 +14,9 @@ import { LayoutModule } from '../../../../projects/lego-bricks-lib/src/lib/layou
       {path: 'checkbox', component: CheckboxComponent},
       {path: '**', component: CheckboxComponent},
     ]),
-    CheckboxModule,
-    LayoutModule
+    LegoCheckboxModule,
+    LegoLayoutModule,
+    LegoDropdownModule
   ],
   declarations: [CheckboxComponent],
   exports: [CheckboxComponent],

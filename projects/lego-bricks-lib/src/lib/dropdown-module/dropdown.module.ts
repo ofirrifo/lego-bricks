@@ -9,4 +9,4 @@ import { DropdownComponent } from './dropdown/dropdown.component';
   declarations: [DropdownComponent],
   exports: [DropdownComponent],
 })
-export class DropdownModule { }
+export class LegoDropdownModule { }
