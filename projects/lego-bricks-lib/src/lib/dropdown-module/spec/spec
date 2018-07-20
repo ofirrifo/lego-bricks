@@ -9,3 +9,4 @@
 - virtual scroll
 - encapsulation none
 - changeDetection onPush
+- close on click outside
