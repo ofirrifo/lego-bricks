@@ -16,9 +16,16 @@ lb-dropdown {
       user-select: none;
     }
 
-    .head{
+    .head {
       cursor: pointer;
+      display: flex;
+      align-items: center;
       @include lego-same-width-height(100%);
+
+      lb-toggle-arrow {
+        margin-left: auto;
+        margin-right: 10px;
+      }
     }
   }
 

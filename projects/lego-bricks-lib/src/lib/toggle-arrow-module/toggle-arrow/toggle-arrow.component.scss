@@ -1,0 +1,12 @@
+.ui-toggle-arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(45deg);
+  transition: transform 300ms;
+
+  &.open {
+    transform: rotate(225deg);
+  }
+}
