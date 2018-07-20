@@ -131,6 +131,11 @@
       "sourceRoot": "projects/lego-bricks-lib/src",
       "projectType": "library",
       "prefix": "lb",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
