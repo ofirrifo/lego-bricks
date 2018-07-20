@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckboxComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }
