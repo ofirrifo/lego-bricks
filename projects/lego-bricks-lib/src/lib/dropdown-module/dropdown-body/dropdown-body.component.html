@@ -3,8 +3,14 @@
     <input class="search-input" type="text" [placeholder]="searchPlaceholder">
   </div>
   <ul class="dropdown-item-list">
-    <li class="dropdown-item" *ngFor="let item of items">
-      {{item}}
+    <li
+      class="dropdown-item"
+      [class.selected]="item.selected"
+      *ngFor="let item of items"
+
+      (click)="selectionChanged.emit(item)"
+    >
+      {{item.text}}
     </li>
   </ul>
 </div>

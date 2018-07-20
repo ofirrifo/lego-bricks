@@ -51,6 +51,10 @@
       &:hover {
         background-color: $teal;
       }
+
+      &.selected{
+        background-color: $cyan;
+      }
     }
   }
 }

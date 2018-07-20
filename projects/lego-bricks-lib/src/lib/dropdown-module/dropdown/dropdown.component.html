@@ -1,5 +1,6 @@
 <div class="lego-dropdown" [class.disabled]="disabled" [class.open]="open">
 
+  <!--Dropdown Head-->
  <lb-dropdown-head
    [placeholder]="placeholder"
    [open]="open"
@@ -7,8 +8,14 @@
    (click)="toggleOpenState()"
  ></lb-dropdown-head>
 
+  <!--Dropdown Body-->
   <lb-dropdown-body
     *ngIf="open"
+    [items]="items"
+
+    (selectionChanged)="selectionChanged($event)"
   ></lb-dropdown-body>
 
 </div>
+
+<button (click)="selectionChanged(items[0])">test</button>

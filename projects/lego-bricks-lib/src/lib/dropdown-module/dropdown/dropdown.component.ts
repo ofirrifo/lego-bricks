@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { DropdownItems } from '../models/dropdown-items.interface';
 
 @Component({
   selector: 'lb-dropdown',
@@ -15,7 +16,11 @@ export class DropdownComponent implements OnInit {
    */
   @Input() disabled: boolean;
 
-  @Input() items = [1, 2, 3];
+  @Input() items: DropdownItems[] = [
+    {id: '1', text: 'Item 1', selected: false},
+    {id: '2', text: 'Item 2', selected: false},
+    {id: '3', text: 'Item 3', selected: false}
+  ];
   @Input() placeholder = 'Please select';
   @Input() searchPlaceholder = 'Search...';
 
@@ -32,6 +37,15 @@ export class DropdownComponent implements OnInit {
    */
   toggleOpenState(): void {
     this.open = !this.open;
+  }
+
+  selectionChanged(changedItem: any) {
+    const items = this.items.map((item: any) => {
+      item.selected = item.id === changedItem.id ? !item.selected : false;
+      return item;
+    });
+
+    this.items = [...items];
   }
 
 }

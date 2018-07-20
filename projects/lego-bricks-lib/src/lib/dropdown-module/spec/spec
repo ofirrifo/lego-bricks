@@ -1,0 +1,11 @@
+- single select dropdown
+- multi select dropdown
+- open body above dropdown
+- open body below dropdown
+- open outside overflow like in modal
+- search option
+- disable
+- custom item component
+- virtual scroll
+- encapsulation none
+- changeDetection onPush
