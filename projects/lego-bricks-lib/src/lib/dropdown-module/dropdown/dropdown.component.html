@@ -1,7 +1,7 @@
-<div class="lego-dropdown" [class.disabled]="">
+<div class="lego-dropdown" [class.disabled]="disabled">
 
-  <div class="head">
-    <lb-toggle-arrow></lb-toggle-arrow>
+  <div class="head" (click)="toggle()">
+    <lb-toggle-arrow [open]="open"></lb-toggle-arrow>
   </div>
 
   <div class="body"></div>

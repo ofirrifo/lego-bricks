@@ -15,9 +15,16 @@ export class DropdownComponent implements OnInit {
    */
   @Input() disabled: boolean;
 
-  constructor() { }
+  open = false;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  toggle(): void {
+    this.open = !this.open;
   }
 
 }
