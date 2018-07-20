@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'lb-dropdown-head',
@@ -9,7 +9,15 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 })
 export class DropdownHeadComponent {
 
+  /**
+   * disable dropdown.
+   * in case disable = true user can't open and change the selected items
+   * the css cursor will be auto
+   */
+  @Input() disabled: boolean;
   @Input() placeholder = 'Please select';
   @Input() open: boolean;
+
+  @Output() toggleOpenChanged = new EventEmitter<boolean>();
 
 }

@@ -4,7 +4,7 @@
    [placeholder]="placeholder"
    [open]="open"
 
-   (click)="toggle()"
+   (toggleOpenChanged)="toggleOpenState()"
  ></lb-dropdown-head>
 
   <div *ngIf="open" class="body">

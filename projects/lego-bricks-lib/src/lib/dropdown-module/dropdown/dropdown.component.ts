@@ -27,7 +27,10 @@ export class DropdownComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggle(): void {
+  /**
+   * toggle dropdown open state
+   */
+  toggleOpenState(): void {
     this.open = !this.open;
   }
 

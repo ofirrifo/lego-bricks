@@ -1,4 +1,13 @@
 <div class="head">
-  <input type="text" class="placeholder" readonly [placeholder]="placeholder">
+
+  <input
+    type="text"
+    class="placeholder"
+    readonly
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+    (click)="toggleOpenChanged.emit()"
+  >
+
   <lb-toggle-arrow [open]="open"></lb-toggle-arrow>
 </div>
