@@ -1,0 +1,11 @@
+lb-row {
+  display: inline-flex;
+  width: 100%;
+  height: 32px;
+  align-items: center;
+  margin-bottom: 13px;
+
+  > * {
+    margin-right: 20px;
+  }
+}

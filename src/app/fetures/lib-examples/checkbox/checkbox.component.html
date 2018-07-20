@@ -1,4 +1,4 @@
-<div class="row">
+<lb-row>
   <!--Example: Enable-->
   <lb-checkbox
     [id]="'checkbox_id_1'"
@@ -18,4 +18,25 @@
     [disabled]="true"
     [label]="'Disabled'"
   ></lb-checkbox>
-</div>
+</lb-row>
+
+
+<lb-row>
+  <!--Example: Enable-->
+  <lb-checkbox
+    [label]="'Click me'"
+    [checked]="true"
+  ></lb-checkbox>
+
+  <!--Example: Indeterminate-->
+  <lb-checkbox
+    [label]="'Indeterminate'"
+    [indeterminate]="true"
+  ></lb-checkbox>
+
+  <!--Example: Disabled-->
+  <lb-checkbox
+    [disabled]="true"
+    [label]="'Disabled'"
+  ></lb-checkbox>
+</lb-row>

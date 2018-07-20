@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { RouterModule } from '@angular/router';
 import { CheckboxModule } from '../../../../projects/lego-bricks-lib/src/lib/checkbox-module/checkbox.module';
+import { LayoutModule } from '../../../../projects/lego-bricks-lib/src/lib/layout-module/layout.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { CheckboxModule } from '../../../../projects/lego-bricks-lib/src/lib/che
       {path: 'checkbox', component: CheckboxComponent},
       {path: '**', component: CheckboxComponent},
     ]),
-    CheckboxModule
+    CheckboxModule,
+    LayoutModule
   ],
   declarations: [CheckboxComponent],
   exports: [CheckboxComponent],
