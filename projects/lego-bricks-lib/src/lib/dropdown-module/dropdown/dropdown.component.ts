@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'lb-dropdown',
@@ -8,6 +8,12 @@ import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DropdownComponent implements OnInit {
+  /**
+   * disable dropdown.
+   * in case disable = true user can't open and change the selected items
+   * the css cursor will be auto
+   */
+  @Input() disabled: boolean;
 
   constructor() { }
 
