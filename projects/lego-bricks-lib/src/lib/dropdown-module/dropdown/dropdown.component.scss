@@ -18,11 +18,7 @@ lb-dropdown {
     @include lego-same-width-height(100%);
   }
 
-  .open {
-    .head {
-      @include lego-thin-solid-border($white);
-    }
-  }
+
 
   .disabled {
     cursor: auto;
