@@ -1,5 +1,7 @@
+<!--Examples: Enable-->
 <lb-row>
-  <!--Example: Enable-->
+
+  <!--Example: Checked-->
   <lb-checkbox
     [id]="'checkbox_id_1'"
     [label]="'Click me'"
@@ -13,10 +15,10 @@
     [indeterminate]="true"
   ></lb-checkbox>
 
-  <!--Example: Disabled-->
+  <!--Example: Label To Left-->
   <lb-checkbox
-    [disabled]="true"
-    [label]="'Disabled'"
+    [label]="'Label To Left'"
+    [labelToLeft]="true"
   ></lb-checkbox>
 </lb-row>
 
@@ -24,12 +26,14 @@
 <lb-row>
   <!--Example: Enable-->
   <lb-checkbox
+    [disabled]="true"
     [label]="'Click me'"
     [checked]="true"
   ></lb-checkbox>
 
   <!--Example: Indeterminate-->
   <lb-checkbox
+    [disabled]="true"
     [label]="'Indeterminate'"
     [indeterminate]="true"
   ></lb-checkbox>
@@ -37,6 +41,7 @@
   <!--Example: Disabled-->
   <lb-checkbox
     [disabled]="true"
-    [label]="'Disabled'"
+    [label]="'Label To Left'"
+    [labelToLeft]="true"
   ></lb-checkbox>
 </lb-row>
