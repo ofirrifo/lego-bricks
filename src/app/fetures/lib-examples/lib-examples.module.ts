@@ -5,20 +5,18 @@ import { RouterModule } from '@angular/router';
 import { LegoCheckboxModule } from '../../../../projects/lego-bricks-lib/src/lib/checkbox-module/checkbox.module';
 import { LegoLayoutModule } from '../../../../projects/lego-bricks-lib/src/lib/layout-module/layout.module';
 import { LegoDropdownModule } from '../../../../projects/lego-bricks-lib/src/lib/dropdown-module/dropdown.module';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { routes } from './lib-examples.routes';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot([
-      {path: '', redirectTo: '/checkbox', pathMatch: 'full'},
-      {path: 'checkbox', component: CheckboxComponent},
-      {path: '**', component: CheckboxComponent},
-    ]),
+    RouterModule.forChild(routes),
     LegoCheckboxModule,
     LegoLayoutModule,
     LegoDropdownModule
   ],
-  declarations: [CheckboxComponent],
-  exports: [CheckboxComponent],
+  declarations: [CheckboxComponent, DropdownComponent],
 })
-export class LibExamplesModule { }
+export class LibExamplesModule {
+}

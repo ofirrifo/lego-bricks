@@ -1,6 +1,11 @@
 import { Routes } from '@angular/router';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
-const routes: Routes = [
-  { path: 'checkbox', component: CheckboxComponent }
+
+export const routes: Routes = [
+  {path: '', redirectTo: '/checkbox', pathMatch: 'full'},
+  {path: 'checkbox', component: CheckboxComponent},
+  {path: 'dropdown', component: DropdownComponent},
+  {path: '**', component: CheckboxComponent},
 ];
