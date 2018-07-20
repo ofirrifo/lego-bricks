@@ -6,7 +6,7 @@
     <li
       class="dropdown-item"
       [class.selected]="item.selected"
-      *ngFor="let item of items"
+      *ngFor="let item of items; trackBy: dropdownItems"
 
       (click)="selectionChanged.emit(item)"
     >
