@@ -11,7 +11,18 @@ let checkboxId = 0;
 })
 export class CheckboxComponent {
 
+  /**
+   * checkbox label text.
+   * by default display to the right of the checkbox.
+   * set @Input() labelToLeft = true will display label to the left of the checkbox
+   * in case checkbox enabled click on the label will change the checkbox state
+   * in case checkbox disable click will not change the checkbox state
+   */
   @Input() label: string;
+
+  /**
+   * true will display label to the left of the checkbox
+   */
   @Input() labelToLeft: boolean;
 
   _id: string;
