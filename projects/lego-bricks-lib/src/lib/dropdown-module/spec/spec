@@ -10,3 +10,7 @@
 - encapsulation none
 - changeDetection onPush
 - close on click outside
+- add label (top | left)
+- add support with reactive form
+- support [(ngModel)]
+- support errors
