@@ -12,13 +12,15 @@ $header-height: 60px;
   app-header {
     grid-area: header;
     background-color: $primary;
+    border-bottom: 1px solid black;
   }
 
   app-left-panel {
     grid-area: aside;
-    background-color: $secondary;
+    background-color: $gray-700;
     overflow: auto;
     height: calc(100vh - #{$header-height});
+    border-right: 1px solid black;
   }
 
   app-stage {

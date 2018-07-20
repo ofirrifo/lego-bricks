@@ -1,14 +1,14 @@
+@import "../../../styles/common-styles";
+
 lb-dropdown {
   display: inline-flex;
   width: 100%;
-  background-color: white;
   height: 32px;
 
   .lego-dropdown {
     display: inline-flex;
-    width: 100%;
-    background-color: white;
-    height: 32px;
+    @include lego-same-width-height(100%);
+    background-color: $gray-900;
 
     * {
       box-sizing: border-box;
