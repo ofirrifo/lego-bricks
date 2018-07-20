@@ -19,11 +19,17 @@ export class DropdownComponent implements OnInit {
   @Input() items: DropdownItems[] = [
     {id: '1', text: 'Item 1', selected: false},
     {id: '2', text: 'Item 2', selected: false},
+    {id: '3', text: 'Item 3', selected: false},
+    {id: '1', text: 'Item 1', selected: false},
+    {id: '2', text: 'Item 2', selected: false},
+    {id: '3', text: 'Item 3', selected: false},
+    {id: '1', text: 'Item 1', selected: false},
+    {id: '2', text: 'Item 2', selected: false},
     {id: '3', text: 'Item 3', selected: false}
   ];
   @Input() placeholder = 'Please select';
   @Input() searchPlaceholder = 'Search...';
-  @Input() showSearch = false;
+  @Input() showSearch = true;
 
   open = false;
 
