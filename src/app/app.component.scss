@@ -9,7 +9,7 @@ $header-height: 60px;
   grid-template-rows: $header-height 1fr;
   grid-template-areas: "header header" "aside main";
 
-  header {
+  app-header {
     grid-area: header;
     background-color: $primary;
   }
