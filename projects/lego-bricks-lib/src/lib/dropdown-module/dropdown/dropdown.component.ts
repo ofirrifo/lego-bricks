@@ -24,7 +24,7 @@ export class DropdownComponent implements OnInit {
   open = false;
 
   constructor() {
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 0; i++) {
       this.items.push({id: i, text: `Item ${i}`, selected: false});
     }
   }
