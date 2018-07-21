@@ -7,12 +7,10 @@ import { DropdownItems } from '../../../../../projects/lego-bricks-lib/src/lib/d
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent implements OnInit {
-
   dropdownItems: DropdownItems[] = this.createMock();
   cloneDropdownItems: DropdownItems[];
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     this.cloneDropdownItems = this.deepClone(this.dropdownItems);
@@ -28,7 +26,7 @@ export class DropdownComponent implements OnInit {
   createMock(): DropdownItems[] {
     const dropdownItems = [];
     for (let i = 0; i < 100; i++) {
-      dropdownItems.push({id: i, text: `Item ${i}`, selected: false});
+      dropdownItems.push({ id: i, text: `Item ${i}`, selected: false });
     }
     return dropdownItems;
   }
@@ -36,6 +34,4 @@ export class DropdownComponent implements OnInit {
   deepClone(data: any): any {
     return JSON.parse(JSON.stringify(data));
   }
-
-
 }
