@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { DropdownItems } from '../models/dropdown-items.interface';
 
 @Component({
   selector: 'lb-dropdown-head',
@@ -17,5 +18,18 @@ export class DropdownHeadComponent {
   @Input() disabled: boolean;
   @Input() placeholder = 'Please select';
   @Input() open: boolean;
+
+  value = '';
+
+  @Input() set selectedItemsMap(selectedItemsMap: Record<string, DropdownItems>) {
+    const selectedItems: DropdownItems[] = Object.values(selectedItemsMap);
+    if (selectedItems.length === 0) {
+      this.value = '';
+    } else if (selectedItems.length === 1) {
+      this.value = selectedItems[0].text;
+    } else {
+      this.value = `${selectedItems.length} selected`;
+    }
+  }
 
 }

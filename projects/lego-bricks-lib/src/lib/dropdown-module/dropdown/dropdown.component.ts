@@ -15,7 +15,6 @@ export class DropdownComponent implements OnInit {
    * the css cursor will be auto
    */
   @Input() disabled: boolean;
-
   @Input() items: DropdownItems[] = [];
   @Input() placeholder = 'Please select';
   @Input() searchPlaceholder = 'Search...';
@@ -24,6 +23,7 @@ export class DropdownComponent implements OnInit {
   @Output() searchChanged = new EventEmitter<string>();
 
   open = false;
+  selectedItemsMap = {};
 
   constructor() {
 
@@ -42,10 +42,17 @@ export class DropdownComponent implements OnInit {
   selectionChanged(changedItem: any): void {
     const items = this.items.map((item: any) => {
       item.selected = item.id === changedItem.id ? !item.selected : false;
+      if (item.selected) {
+        this.selectedItemsMap[item.id] = item;
+      } else {
+        delete this.selectedItemsMap[item.id];
+      }
       return item;
     });
 
+
     this.items = [...items];
+    this.selectedItemsMap = {...this.selectedItemsMap};
   }
 
 
