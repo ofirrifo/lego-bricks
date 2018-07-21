@@ -5,6 +5,8 @@ lb-dropdown {
   width: 100%;
   height: $form-controls-height;
 
+  @include scrollbar;
+
   * {
     box-sizing: border-box;
     user-select: none;
