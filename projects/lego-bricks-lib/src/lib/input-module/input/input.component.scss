@@ -1,37 +1,33 @@
 @import "../../../styles/common-styles";
 
 lb-input {
+  width: 100%;
 
   * {
     box-sizing: border-box;
   }
 
-  .lego-input-wrapper {
-    display: flex;
-    width: 100%;
+  /deep/ input {
+    background-color: $gray-900;
+    @include lego-same-width-height(100%);
+    @include lego-thin-solid-border($gray-600);
+    @include ellipsis;
+    height: $form-controls-height;
+    font-size: 13px;
+    padding-left: 8px;
+    transition: border 300ms;
 
-    .real-input {
-      background-color: $gray-900;
-      @include lego-same-width-height(100%);
-      @include lego-thin-solid-border($gray-600);
-      @include ellipsis;
-      height: $form-controls-height;
-      font-size: 13px;
-      padding-left: 8px;
-      transition: border 300ms;
+    &:hover {
+      @include lego-thin-solid-border($white);
+    }
 
-      &:hover {
-        @include lego-thin-solid-border($white);
-      }
+    &:focus {
+      outline: 0;
+      @include lego-thin-solid-border($white);
+    }
 
-      &:focus {
-        outline: 0;
-        @include lego-thin-solid-border($white);
-      }
-
-      &::-webkit-input-placeholder {
-        font-style: italic;
-      }
+    &::-webkit-input-placeholder {
+      font-style: italic;
     }
   }
 }
