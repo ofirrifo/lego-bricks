@@ -3,6 +3,7 @@
     <input class="search-input" type="text" [placeholder]="searchPlaceholder">
   </div>
   <ul class="dropdown-item-list">
+    <lb-empty-state *ngIf="items.length === 0"></lb-empty-state>
     <li
       class="dropdown-item"
       [class.selected]="item.selected"
@@ -12,6 +13,6 @@
     >
       {{item.text}}
     </li>
-    <lb-empty-state></lb-empty-state>
+
   </ul>
 </div>
