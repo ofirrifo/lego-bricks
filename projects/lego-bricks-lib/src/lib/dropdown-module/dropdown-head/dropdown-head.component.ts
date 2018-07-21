@@ -9,7 +9,6 @@ import { DropdownItems } from '../models/dropdown-items.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DropdownHeadComponent {
-
   /**
    * disable dropdown.
    * in case disable = true user can't open and change the selected items
@@ -21,7 +20,8 @@ export class DropdownHeadComponent {
 
   value = '';
 
-  @Input() set selectedItemsMap(selectedItemsMap: Record<string, DropdownItems>) {
+  @Input()
+  set selectedItemsMap(selectedItemsMap: Record<string, DropdownItems>) {
     const selectedItems: DropdownItems[] = Object.values(selectedItemsMap);
     if (selectedItems.length === 0) {
       this.value = '';
@@ -31,5 +31,4 @@ export class DropdownHeadComponent {
       this.value = `${selectedItems.length} selected`;
     }
   }
-
 }
