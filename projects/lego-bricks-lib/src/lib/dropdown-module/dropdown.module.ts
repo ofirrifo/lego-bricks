@@ -6,15 +6,11 @@ import { DropdownHeadComponent } from './dropdown-head/dropdown-head.component';
 import { DropdownBodyComponent } from './dropdown-body/dropdown-body.component';
 import { LegoEmptyStateModule } from '../empty-state-module/empty-state.module';
 import { LegoSearchModule } from '../search-module/search.module';
+import { LegoLoaderModule } from '../loader-module/loader.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    LegoToggleArrowModule,
-    LegoEmptyStateModule,
-    LegoSearchModule
-  ],
+  imports: [CommonModule, LegoToggleArrowModule, LegoEmptyStateModule, LegoSearchModule, LegoLoaderModule],
   declarations: [DropdownComponent, DropdownHeadComponent, DropdownBodyComponent],
-  exports: [DropdownComponent],
+  exports: [DropdownComponent]
 })
-export class LegoDropdownModule { }
+export class LegoDropdownModule {}

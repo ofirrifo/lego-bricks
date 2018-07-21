@@ -6,6 +6,7 @@
 
   <ul class="dropdown-item-list">
     <lb-empty-state *ngIf="items.length === 0"></lb-empty-state>
+    <lb-loader></lb-loader>
     <li
       *ngIf="showUnSelectAllItem"
       class="dropdown-item un-select-all-item"
