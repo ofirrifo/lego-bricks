@@ -21,7 +21,7 @@ export class DropdownComponent implements OnInit {
   dropdownSearchChanged(searchValue: string): void {
     this.cloneDropdownItems = this.deepClone(this.dropdownItems);
     this.cloneDropdownItems = this.cloneDropdownItems.filter((dropdownItems: DropdownItems) => {
-      return dropdownItems.text.includes(searchValue);
+      return dropdownItems.text.toLowerCase().includes(searchValue.toLowerCase());
     });
   }
 
