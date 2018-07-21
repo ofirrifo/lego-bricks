@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { DropdownItems } from '../models/dropdown-items.interface';
 
 @Component({
@@ -21,12 +21,12 @@ export class DropdownComponent implements OnInit {
   @Input() searchPlaceholder = 'Search...';
   @Input() showSearch = true;
 
+  @Output() searchChanged = new EventEmitter<string>();
+
   open = false;
 
   constructor() {
-    for (let i = 0; i < 100; i++) {
-      this.items.push({id: i, text: `Item ${i}`, selected: false});
-    }
+
   }
 
   ngOnInit() {
@@ -48,8 +48,5 @@ export class DropdownComponent implements OnInit {
     this.items = [...items];
   }
 
-  searchChanged(): void {
-    this.items = [];
-  }
 
 }

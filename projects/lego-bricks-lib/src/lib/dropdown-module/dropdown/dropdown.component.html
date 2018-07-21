@@ -15,7 +15,7 @@
     [showSearch]="showSearch"
 
     (selectionChanged)="selectionChanged($event)"
-    (searchChanged)="searchChanged($event)"
+    (searchChanged)="searchChanged.emit($event)"
   ></lb-dropdown-body>
 
 </div>
