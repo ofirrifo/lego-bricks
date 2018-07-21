@@ -1,65 +1,58 @@
 .lego-loader-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
 
-  .loader {
-    display: inline-block;
-    position: relative;
-    width: 64px;
-    height: 64px;
-
-    .dot {
-      position: absolute;
-      top: 27px;
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: #fff;
-      animation-timing-function: cubic-bezier(0, 1, 1, 0);
-    }
-
-    .dot:nth-child(1) {
-      left: 6px;
-      animation: loader-dot-1 0.6s infinite;
-    }
-    .dot:nth-child(2) {
-      left: 6px;
-      animation: loader-dot-2 0.6s infinite;
-    }
-    .dot:nth-child(3) {
-      left: 26px;
-      animation: loader-dot-2 0.6s infinite;
-    }
-    .dot:nth-child(4) {
-      left: 45px;
-      animation: loader-dot-3 0.6s infinite;
-    }
+  .dot {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
 
-  @keyframes loader-dot-1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
+  .dot:nth-child(1) {
+    left: 6px;
+    animation: loader-dot-1 0.6s infinite;
   }
-  @keyframes loader-dot-3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
+  .dot:nth-child(2) {
+    left: 6px;
+    animation: loader-dot-2 0.6s infinite;
   }
-  @keyframes loader-dot-2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(19px, 0);
-    }
+  .dot:nth-child(3) {
+    left: 26px;
+    animation: loader-dot-2 0.6s infinite;
+  }
+  .dot:nth-child(4) {
+    left: 45px;
+    animation: loader-dot-3 0.6s infinite;
+  }
+}
+
+@keyframes loader-dot-1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-dot-3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader-dot-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(19px, 0);
   }
 }

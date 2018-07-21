@@ -9,6 +9,7 @@ import { DropdownItem } from '../../../../../projects/lego-bricks-lib/src/lib/dr
 export class DropdownComponent implements OnInit {
   dropdownItems: DropdownItem[] = this.createMock();
   cloneDropdownItems: DropdownItem[];
+  showLoader = false;
 
   constructor() {}
 
@@ -17,10 +18,14 @@ export class DropdownComponent implements OnInit {
   }
 
   dropdownSearchChanged(searchValue: string): void {
-    this.cloneDropdownItems = this.deepClone(this.dropdownItems);
-    this.cloneDropdownItems = this.cloneDropdownItems.filter((dropdownItem: DropdownItem) => {
-      return dropdownItem.value.toLowerCase().includes(searchValue.toLowerCase());
-    });
+    this.showLoader = true;
+    setTimeout(() => {
+      this.cloneDropdownItems = this.deepClone(this.dropdownItems);
+      this.cloneDropdownItems = this.cloneDropdownItems.filter((dropdownItem: DropdownItem) => {
+        return dropdownItem.value.toLowerCase().includes(searchValue.toLowerCase());
+      });
+      this.showLoader = false;
+    }, 100);
   }
 
   createMock(arrayLength = 100): DropdownItem[] {

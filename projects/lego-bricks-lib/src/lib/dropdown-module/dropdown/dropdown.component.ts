@@ -29,6 +29,7 @@ export class DropdownComponent implements OnInit {
   @Input() closeOnSelect = true;
   @Input() multiSelect = false;
   @Input() showUnSelectAllItem = true;
+  @Input() showLoader = false;
 
   _items: DropdownItem[] = [];
   @Input()

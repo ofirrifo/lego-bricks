@@ -1,6 +1,7 @@
 <lb-row>
   <lb-dropdown
   [items]="cloneDropdownItems"
+  [showLoader]="showLoader"
 
   (searchChanged)="dropdownSearchChanged($event)"
   ></lb-dropdown>

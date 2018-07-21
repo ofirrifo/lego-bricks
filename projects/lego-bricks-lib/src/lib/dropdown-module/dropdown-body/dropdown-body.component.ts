@@ -14,6 +14,7 @@ export class DropdownBodyComponent {
   @Output() selectionChanged = new EventEmitter<DropdownItem>();
   @Input() showSearch = false;
   @Input() showUnSelectAllItem = true;
+  @Input() showLoader = false;
 
   @Output() searchChanged = new EventEmitter<string>();
 

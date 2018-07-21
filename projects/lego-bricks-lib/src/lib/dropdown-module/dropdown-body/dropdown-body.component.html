@@ -1,14 +1,18 @@
 <div class="body">
 
+  <!--Search-->
   <div *ngIf="showSearch" class="search-wrapper">
     <lb-search (searchChanged)="searchChanged.emit($event)"></lb-search>
   </div>
 
+  <!--Loader-->
+  <lb-loader *ngIf="showLoader"></lb-loader>
+
+  <!--Items-->
   <ul class="dropdown-item-list">
     <lb-empty-state *ngIf="items.length === 0"></lb-empty-state>
-    <lb-loader></lb-loader>
     <li
-      *ngIf="showUnSelectAllItem"
+      *ngIf="showUnSelectAllItem && items.length"
       class="dropdown-item un-select-all-item"
 
       (click)="selectionChanged.emit(pleaseSelectItem)"
