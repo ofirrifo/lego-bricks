@@ -23,6 +23,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "^6.0.3",
