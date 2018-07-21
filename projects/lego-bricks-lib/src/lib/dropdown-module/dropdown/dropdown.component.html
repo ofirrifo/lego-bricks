@@ -14,6 +14,7 @@
     *ngIf="open"
     [items]="items"
     [showSearch]="showSearch"
+    [showUnSelectAllItem]="showUnSelectAllItem"
 
     (selectionChanged)="onSelectionChanged($event)"
     (searchChanged)="searchChanged.emit($event)"

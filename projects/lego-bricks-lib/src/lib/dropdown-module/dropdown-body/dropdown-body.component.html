@@ -7,6 +7,14 @@
   <ul class="dropdown-item-list">
     <lb-empty-state *ngIf="items.length === 0"></lb-empty-state>
     <li
+      *ngIf="showUnSelectAllItem"
+      class="dropdown-item un-select-all-item"
+
+      (click)="selectionChanged.emit(pleaseSelectItem)"
+    >
+      {{pleaseSelectItem.value}}
+    </li>
+    <li
       class="dropdown-item"
       [class.selected]="item.selected"
       *ngFor="let item of items; trackBy: dropdownItems"

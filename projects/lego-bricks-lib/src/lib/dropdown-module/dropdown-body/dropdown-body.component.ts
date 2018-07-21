@@ -13,8 +13,11 @@ export class DropdownBodyComponent {
   @Input() items: DropdownItem[] = [];
   @Output() selectionChanged = new EventEmitter<DropdownItem>();
   @Input() showSearch = false;
+  @Input() showUnSelectAllItem = true;
 
   @Output() searchChanged = new EventEmitter<string>();
+
+  pleaseSelectItem: DropdownItem = { id: null, value: 'Un select all', isPleaseSelectItem: true };
 
   dropdownItems(index, item: DropdownItem): string | number {
     return item ? item.id : undefined;

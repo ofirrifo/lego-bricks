@@ -1,4 +1,4 @@
-@import "../../../styles/common-styles";
+@import '../../../styles/common-styles';
 
 .body {
   display: flex;
@@ -36,6 +36,11 @@
       &.selected {
         background-color: $cyan;
       }
+    }
+
+    .un-select-all-item {
+      font-style: italic;
+      color: $gray-600;
     }
   }
 }
