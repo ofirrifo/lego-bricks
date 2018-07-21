@@ -1,10 +1,39 @@
-.lego-input-wrapper{
-  display: flex;
-  width: 100%;
-  background-color: red;
+@import "../../../styles/common-styles";
 
-  .real-input{
-    height: 32px;
+lb-input {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .lego-input-wrapper {
+    display: flex;
     width: 100%;
+
+    .real-input {
+      background-color: $gray-900;
+      @include lego-same-width-height(100%);
+      @include lego-thin-solid-border($gray-600);
+      @include ellipsis;
+      height: $form-controls-height;
+      font-size: 13px;
+      padding-left: 8px;
+      transition: border 300ms;
+
+      &:hover {
+        @include lego-thin-solid-border($white);
+      }
+
+      &:focus {
+        outline: 0;
+        @include lego-thin-solid-border($white);
+      }
+
+      &::-webkit-input-placeholder {
+        font-style: italic;
+      }
+    }
   }
 }
+
+

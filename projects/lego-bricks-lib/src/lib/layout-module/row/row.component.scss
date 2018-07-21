@@ -1,7 +1,8 @@
+@import "../../../styles/common-styles";
 lb-row {
   display: inline-flex;
   width: 100%;
-  height: 32px;
+  height: $form-controls-height;
   align-items: center;
   margin-bottom: 13px;
 
