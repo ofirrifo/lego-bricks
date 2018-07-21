@@ -7,6 +7,7 @@ import { LegoLayoutModule } from '../../../../projects/lego-bricks-lib/src/lib/l
 import { LegoDropdownModule } from '../../../../projects/lego-bricks-lib/src/lib/dropdown-module/dropdown.module';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { routes } from './lib-examples.routes';
+import { LegoInputModule } from '../../../../projects/lego-bricks-lib/src/lib/input-module/input.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { routes } from './lib-examples.routes';
     RouterModule.forChild(routes),
     LegoCheckboxModule,
     LegoLayoutModule,
-    LegoDropdownModule
+    LegoDropdownModule,
+    LegoInputModule
   ],
   declarations: [CheckboxComponent, DropdownComponent],
 })

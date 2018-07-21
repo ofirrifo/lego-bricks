@@ -9,4 +9,4 @@ import { InputComponent } from './input/input.component';
   declarations: [InputComponent],
   exports: [InputComponent],
 })
-export class InputModule { }
+export class LegoInputModule { }

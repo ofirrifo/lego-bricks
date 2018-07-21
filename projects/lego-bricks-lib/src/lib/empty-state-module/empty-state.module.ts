@@ -9,4 +9,4 @@ import { EmptyStateComponent } from './empty-state/empty-state.component';
   declarations: [EmptyStateComponent],
   exports: [EmptyStateComponent],
 })
-export class EmptyStateModule { }
+export class LegoEmptyStateModule { }

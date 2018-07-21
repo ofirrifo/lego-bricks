@@ -1,0 +1,10 @@
+.lego-input-wrapper{
+  display: flex;
+  width: 100%;
+  background-color: red;
+
+  .real-input{
+    height: 32px;
+    width: 100%;
+  }
+}
