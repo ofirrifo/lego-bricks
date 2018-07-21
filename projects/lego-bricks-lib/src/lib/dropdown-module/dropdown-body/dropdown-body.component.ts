@@ -15,6 +15,8 @@ export class DropdownBodyComponent {
   @Output() selectionChanged = new EventEmitter<any>();
   @Input() showSearch = false;
 
+  @Output() searchChanged = new EventEmitter<string>();
+
   dropdownItems(index, item): void {
     return item ? item.id : undefined;
   }

@@ -14,29 +14,6 @@
   .search-wrapper {
     padding: 6px;
     background-color: $gray-700;
-
-    .search-input {
-      background-color: $gray-900;
-      @include lego-same-width-height(100%);
-      @include lego-thin-solid-border($gray-600);
-      height: 30px;
-      font-size: 13px;
-      padding-left: 8px;
-      transition: border 300ms;
-
-      &:hover {
-        @include lego-thin-solid-border($white);
-      }
-
-      &:focus {
-        outline: 0;
-        @include lego-thin-solid-border($white);
-      }
-
-      &::-webkit-input-placeholder {
-        font-style: italic;
-      }
-    }
   }
 
   .dropdown-item-list {
@@ -56,7 +33,7 @@
         background-color: $teal;
       }
 
-      &.selected{
+      &.selected {
         background-color: $cyan;
       }
     }

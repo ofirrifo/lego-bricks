@@ -5,14 +5,14 @@ import { LegoToggleArrowModule } from '../toggle-arrow-module/toggle-arrow-modul
 import { DropdownHeadComponent } from './dropdown-head/dropdown-head.component';
 import { DropdownBodyComponent } from './dropdown-body/dropdown-body.component';
 import { LegoEmptyStateModule } from '../empty-state-module/empty-state.module';
-import { LegoInputModule } from '../input-module/input.module';
+import { LegoSearchModule } from '../search-module/search.module';
 
 @NgModule({
   imports: [
     CommonModule,
     LegoToggleArrowModule,
     LegoEmptyStateModule,
-    LegoInputModule
+    LegoSearchModule
   ],
   declarations: [DropdownComponent, DropdownHeadComponent, DropdownBodyComponent],
   exports: [DropdownComponent],

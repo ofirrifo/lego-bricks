@@ -39,13 +39,17 @@ export class DropdownComponent implements OnInit {
     this.open = !this.open;
   }
 
-  selectionChanged(changedItem: any) {
+  selectionChanged(changedItem: any): void {
     const items = this.items.map((item: any) => {
       item.selected = item.id === changedItem.id ? !item.selected : false;
       return item;
     });
 
     this.items = [...items];
+  }
+
+  searchChanged(): void {
+    this.items = [];
   }
 
 }

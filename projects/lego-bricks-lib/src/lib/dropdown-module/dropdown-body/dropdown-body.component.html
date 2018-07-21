@@ -1,7 +1,9 @@
 <div class="body">
+
   <div *ngIf="showSearch" class="search-wrapper">
-    <input class="search-input" type="text" [placeholder]="searchPlaceholder">
+    <lb-search (searchChanged)="searchChanged.emit($event)"></lb-search>
   </div>
+
   <ul class="dropdown-item-list">
     <lb-empty-state *ngIf="items.length === 0"></lb-empty-state>
     <li
