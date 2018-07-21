@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
-import { DropdownItems } from '../models/dropdown-items.interface';
+import { DropdownItem } from '../models/dropdown-items.interface';
 
 @Component({
   selector: 'lb-dropdown-body',
@@ -9,16 +9,14 @@ import { DropdownItems } from '../models/dropdown-items.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DropdownBodyComponent {
-
   @Input() searchPlaceholder = 'Search...';
-  @Input() items: DropdownItems[] = [];
-  @Output() selectionChanged = new EventEmitter<any>();
+  @Input() items: DropdownItem[] = [];
+  @Output() selectionChanged = new EventEmitter<DropdownItem>();
   @Input() showSearch = false;
 
   @Output() searchChanged = new EventEmitter<string>();
 
-  dropdownItems(index, item): void {
+  dropdownItems(index, item: DropdownItem): string | number {
     return item ? item.id : undefined;
   }
-
 }

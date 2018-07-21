@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
-import { DropdownItems } from '../models/dropdown-items.interface';
+import { DropdownItem } from '../models/dropdown-items.interface';
 
 @Component({
   selector: 'lb-dropdown-head',
@@ -21,12 +21,12 @@ export class DropdownHeadComponent {
   value = '';
 
   @Input()
-  set selectedItemsMap(selectedItemsMap: Record<string, DropdownItems>) {
-    const selectedItems: DropdownItems[] = Object.values(selectedItemsMap);
+  set selectedItemsMap(selectedItemsMap: Record<string, DropdownItem>) {
+    const selectedItems: DropdownItem[] = Object.values(selectedItemsMap);
     if (selectedItems.length === 0) {
       this.value = '';
     } else if (selectedItems.length === 1) {
-      this.value = selectedItems[0].text;
+      this.value = selectedItems[0].value;
     } else {
       this.value = `${selectedItems.length} selected`;
     }
